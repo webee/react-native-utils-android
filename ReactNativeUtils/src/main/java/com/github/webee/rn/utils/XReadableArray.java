@@ -19,6 +19,9 @@ public class XReadableArray implements ReadableArray {
 
     public XReadableArray getXArray(int index) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return new XReadableArray(readableArray.getArray(index));
         }
         return null;
@@ -26,6 +29,9 @@ public class XReadableArray implements ReadableArray {
 
     public XReadableMap getXMap(int index) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return new XReadableMap(readableArray.getMap(index));
         }
         return null;
@@ -33,6 +39,9 @@ public class XReadableArray implements ReadableArray {
 
     public Boolean getDefaultBoolean(int index, Boolean def) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return readableArray.getBoolean(index);
         }
         return def;
@@ -44,6 +53,9 @@ public class XReadableArray implements ReadableArray {
 
     public Double getDefaultDouble(int index, Double def) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return readableArray.getDouble(index);
         }
         return def;
@@ -55,6 +67,9 @@ public class XReadableArray implements ReadableArray {
 
     public Integer getDefaultInt(int index, Integer def) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return readableArray.getInt(index);
         }
         return def;
@@ -66,6 +81,9 @@ public class XReadableArray implements ReadableArray {
 
     public Long getDefaultLong(int index, Long def) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return (long)readableArray.getDouble(index);
         }
         return def;
@@ -77,6 +95,9 @@ public class XReadableArray implements ReadableArray {
 
     public String getDefaultString(int index, String def) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return readableArray.getString(index);
         }
         return def;
@@ -88,6 +109,9 @@ public class XReadableArray implements ReadableArray {
 
     public ReadableArray getDefaultArray(int index) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return readableArray.getArray(index);
         }
         return null;
@@ -95,6 +119,9 @@ public class XReadableArray implements ReadableArray {
 
     public ReadableMap getDefaultMap(int index) {
         if (index < size) {
+            if (readableArray.isNull(index)) {
+                return null;
+            }
             return readableArray.getMap(index);
         }
         return null;

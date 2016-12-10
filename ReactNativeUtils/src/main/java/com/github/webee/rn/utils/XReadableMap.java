@@ -18,6 +18,9 @@ public class XReadableMap implements ReadableMap {
 
     public XReadableArray getXArray(String name) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return new XReadableArray(readableMap.getArray(name));
         }
         return null;
@@ -25,6 +28,9 @@ public class XReadableMap implements ReadableMap {
 
     public XReadableMap getXMap(String name) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return new XReadableMap(readableMap.getMap(name));
         }
         return null;
@@ -32,6 +38,9 @@ public class XReadableMap implements ReadableMap {
 
     public Boolean getDefaultBoolean(String name, Boolean def) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return readableMap.getBoolean(name);
         }
         return def;
@@ -43,6 +52,9 @@ public class XReadableMap implements ReadableMap {
 
     public Double getDefaultDouble(String name, Double def) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return readableMap.getDouble(name);
         }
         return def;
@@ -54,6 +66,9 @@ public class XReadableMap implements ReadableMap {
 
     public Integer getDefaultInt(String name, Integer def) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return readableMap.getInt(name);
         }
         return def;
@@ -65,6 +80,9 @@ public class XReadableMap implements ReadableMap {
 
     public Long getDefaultLong(String name, Long def) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return (long)readableMap.getDouble(name);
         }
         return def;
@@ -76,6 +94,9 @@ public class XReadableMap implements ReadableMap {
 
     public String getDefaultString(String name, String def) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return readableMap.getString(name);
         }
         return def;
@@ -87,6 +108,9 @@ public class XReadableMap implements ReadableMap {
 
     public ReadableArray getDefaultArray(String name) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return readableMap.getArray(name);
         }
         return null;
@@ -94,6 +118,9 @@ public class XReadableMap implements ReadableMap {
 
     public ReadableMap getDefaultMap(String name) {
         if (readableMap.hasKey(name)) {
+            if (readableMap.isNull(name)) {
+                return null;
+            }
             return readableMap.getMap(name);
         }
         return null;
